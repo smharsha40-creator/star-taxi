@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Star Taxi – 24×7 Auto Service in Vasantha Narasapura & Tumakuru</title>
+
+<meta name="description" content="Star Taxi offers 24×7 auto and taxi service in Vasantha Narasapura and Tumakuru nearby areas. Fast pickup, local driver, honest pricing. Call or WhatsApp now.">
+<meta name="keywords" content="Star Taxi, Auto Service Vasantha Narasapura, Tumakuru Auto, 24x7 Taxi Service, Local Auto Booking, KA06 AC 4242">
+
+<style>
+:root{
+  --blue:#38BDF8;
+  --bg:#020617;
+  --card:#0f172a;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+  --green:#25D366;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+}
+a{text-decoration:none;color:inherit}
+
+/* INTRO */
+#intro{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(135deg,#020617,#0f172a);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  animation:introOut 2.8s forwards;
+}
+#intro h1{
+  font-size:42px;
+  font-weight:900;
+  color:var(--blue);
+  animation:pop 1.2s ease;
+}
+@keyframes introOut{0%,70%{opacity:1}100%{opacity:0;pointer-events:none}}
+@keyframes pop{from{transform:scale(.7);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(2,6,23,.8);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+.header{
+  max-width:1100px;
+  margin:auto;
+  padding:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.logo{font-size:20px;font-weight:900;color:var(--blue)}
+.header a{padding:10px 14px;border-radius:12px;font-weight:800}
+.call{background:#0ea5e9;color:#020617}
+.whatsapp{background:var(--green);color:#020617}
+
+/* HERO */
+.hero{padding:80px 16px 40px}
+.hero-inner{max-width:1100px;margin:auto}
+.hero h1{font-size:44px;font-weight:900}
+.hero p{font-size:18px;color:var(--muted);max-width:600px}
+
+/* BOOKING */
+.booking{
+  margin-top:30px;
+  background:var(--card);
+  padding:24px;
+  border-radius:20px;
+  box-shadow:0 30px 80px rgba(0,0,0,.4);
+}
+.booking input{
+  width:100%;
+  padding:14px;
+  margin-bottom:14px;
+  border-radius:12px;
+  border:none;
+  background:#020617;
+  color:#fff;
+  font-size:16px;
+}
+.booking button{
+  width:100%;
+  padding:16px;
+  border:none;
+  border-radius:14px;
+  background:var(--green);
+  color:#020617;
+  font-weight:900;
+  font-size:18px;
+  cursor:pointer;
+}
+
+/* SECTIONS */
+.section{max-width:1100px;margin:auto;padding:80px 16px}
+.section h2{font-size:32px;margin-bottom:16px}
+.section p{color:var(--muted);max-width:700px}
+
+/* AUTO */
+.auto-box{background:var(--card);padding:24px;border-radius:20px}
+.auto-photos{display:flex;gap:14px;margin-top:16px;flex-wrap:wrap}
+.auto-photos img{width:180px;border-radius:12px;background:#000}
+
+/* ANIM */
+.reveal{opacity:0;transform:translateY(40px);transition:all .9s ease}
+.reveal.show{opacity:1;transform:none}
+
+/* FLOAT */
+.float{
+  position:fixed;
+  bottom:14px;
+  right:14px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.float a{
+  padding:14px 16px;
+  border-radius:50px;
+  font-weight:900;
+  color:#020617;
+}
+.float-call{background:var(--blue)}
+.float-wa{background:var(--green)}
+</style>
+</head>
+
+<body>
+
+<div id="intro"><h1>⭐ Star Taxi</h1></div>
+
+<audio id="horn" src="https://assets.mixkit.co/sfx/preview/mixkit-car-horn-718.mp3"></audio>
+
+<header>
+  <div class="header">
+    <div class="logo">⭐ Star Taxi</div>
+    <div>
+      <a class="call" href="tel:9900880512">Call</a>
+      <a class="whatsapp" href="https://wa.me/919900880512">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner reveal">
+    <h1>24×7 Auto Service</h1>
+    <p>Trusted local auto service in Vasantha Narasapura & Tumakuru nearby areas. Fast pickup. Honest pricing.</p>
+
+    <div class="booking">
+      <input id="name" placeholder="Your name (optional)">
+      <input id="phone" placeholder="Phone number (optional)">
+      <input id="pickup" placeholder="Pickup location (optional)">
+      <input id="drop" placeholder="Drop location (optional)">
+      <button onclick="book()">Book on WhatsApp</button>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <h2>Why Star Taxi?</h2>
+  <p>Single-auto local service. No app confusion. Direct contact. Faster pickup.</p>
+</section>
+
+<section class="section reveal">
+  <h2>Our Auto</h2>
+  <div class="auto-box">
+    <b>Vehicle Number: KA06 AC 4242</b>
+    <div class="auto-photos">
+      <img src="https://uploads.onecompiler.io/446uz5c9w/447j9wdg8/IMG-20251213-WA0009.jpg">
+      <img src="https://uploads.onecompiler.io/446uz5c9w/447j9wdg8/IMG-20251213-WA0010.jpg">
+      <img src="https://uploads.onecompiler.io/446uz5c9w/447j9wdg8/IMG-20251213-WA0011.jpg">
+    </div>
+  </div>
+</section>
+
+<div class="float">
+  <a class="float-call" href="tel:9900880512">📞 Call</a>
+  <a class="float-wa" href="https://wa.me/919900880512">💬 WhatsApp</a>
+</div>
+
+<script>
+window.addEventListener("load",()=>{
+  const h=document.getElementById("horn");
+  h.volume=0.15;
+  h.play().catch(()=>{});
+});
+
+function book(){
+  const n = document.getElementById("name").value.trim();
+  const p = document.getElementById("phone").value.trim();
+  const pk = document.getElementById("pickup").value.trim();
+  const d = document.getElementById("drop").value.trim();
+
+  let msg = "🚖 Star Taxi Booking Request";
+
+  if(n) msg += `\nName: ${n}`;
+  if(p) msg += `\nPhone: ${p}`;
+  if(pk) msg += `\nPickup: ${pk}`;
+  if(d) msg += `\nDrop: ${d}`;
+
+  window.location.href =
+    "https://wa.me/919900880512?text=" + encodeURIComponent(msg);
+}
+
+const els=document.querySelectorAll(".reveal");
+const io=new IntersectionObserver(e=>{
+  e.forEach(x=>x.isIntersecting&&x.target.classList.add("show"));
+});
+els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
